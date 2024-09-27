@@ -2,23 +2,25 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+  
 
         public MainPage()
         {
             InitializeComponent();
         }
-
-        private void OnCounterClicked(object sender, EventArgs e)
+        public class Moeda
         {
-            count++;
+            private string LadoSorteado;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            public string LadoSorteado1 { get => LadoSorteado; set => LadoSorteado = value; }
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            public int SortearLado() {
+                return new Random().Next(1, 2);
+            }
+        }
+        private void flipButton_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 
