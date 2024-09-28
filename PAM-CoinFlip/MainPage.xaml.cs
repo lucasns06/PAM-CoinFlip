@@ -14,13 +14,38 @@
 
             public string LadoSorteado1 { get => LadoSorteado; set => LadoSorteado = value; }
 
-            public int SortearLado() {
-                return new Random().Next(1, 2);
+            public void Sortear() {
+                int resultado = new Random().Next(2);
+
+                if (resultado == 0)
+                {
+                    LadoSorteado = "Cara";
+                }
+                else
+                {
+                    LadoSorteado = "Coroa";
+                }
             }
+
         }
         private void flipButton_Clicked(object sender, EventArgs e)
         {
-
+            string ladoSelecionado = ChoosePicker.SelectedItem.ToString();
+            Moeda moeda = new Moeda();
+            moeda.Sortear();
+            
+            if (moeda.LadoSorteado1 == ladoSelecionado)
+            {
+                ladoSorteado = "cara";
+                ResultLabel.Text = "Parabens! Você escolheu {LadoSelecionado} e tirou {ladoSelecionado}";
+            }
+            else
+            {
+                ladoSorteado = "coroa";
+                ResultLabel.Text = "Que pena! Você escolheu {LadoSelecionado} e tirou {ladoSelecionado}";
+            }
+            MoedaImage.Source = $"{ladoSorteado}.jfif";
+            ResultLabel.Text = resultado;
         }
     }
 

@@ -5,35 +5,35 @@
 
     <ScrollView>
         <VerticalStackLayout
-    Padding="30,0"
-    Spacing="25">
+            Padding="30,0"
+            Spacing="25">   
             <Label
-        HorizontalOptions="Center"
-        Text="CoinFlip"
-        />
+                HorizontalOptions="Center"
+                Text="CoinFlip"
+                />
             <HorizontalStackLayout HorizontalOptions="Center">
                 <Label 
-            VerticalOptions="Center"
-            Text="Nome:"
-            />
+                    VerticalOptions="Center"
+                    Text="Nome:"
+                    />
                 <Entry 
-            x:Name="nameEntry"
-            Placeholder="Digite seu nome"
-            MinimumWidthRequest="200"
-            />
+                    x:Name="nameEntry"
+                    Placeholder="Digite seu nome"
+                    MinimumWidthRequest="200"
+                    />
             </HorizontalStackLayout>
 
             <Image x:Name="imageMoeda" Source="cara.jfif" WidthRequest="150"></Image>
 
             <Label 
-        x:Name="resultLabel"
-        Text=""
-        />
+                x:Name="resultLabel"
+                Text=""
+                />
 
             <Picker     
-           x:Name="ChoosePicker"
-           Title="Escolhe"
-           WidthRequest="294">
+               x:Name="ChoosePicker"
+               Title="Escolhe"
+               WidthRequest="294">
                 <Picker.Items>
                     <x:String>Cara</x:String>
                     <x:String>Coroa</x:String>
@@ -42,10 +42,10 @@
 
 
             <Button 
-        x:Name="flipButton"
-        Text="Jogar a moeda"
-        Clicked="flipButton_Clicked"
-        />
+                x:Name="flipButton"
+                Text="Jogar a moeda"
+                Clicked="flipButton_Clicked"
+                />
 
         </VerticalStackLayout>
     </ScrollView>
