@@ -36,16 +36,15 @@
             
             if (moeda.LadoSorteado1 == ladoSelecionado)
             {
-                ladoSorteado = "cara";
-                ResultLabel.Text = "Parabens! Você escolheu {LadoSelecionado} e tirou {ladoSelecionado}";
+              
+                resultLabel.Text = "Parabens! Você escolheu " + moeda.LadoSorteado1 +" e tirou " + ladoSelecionado;
             }
             else
             {
-                ladoSorteado = "coroa";
-                ResultLabel.Text = "Que pena! Você escolheu {LadoSelecionado} e tirou {ladoSelecionado}";
+             
+                resultLabel.Text = "Que pena! Você escolheu {LadoSelecionado} e tirou {ladoSelecionado}";
             }
-            MoedaImage.Source = $"{ladoSorteado}.jfif";
-            ResultLabel.Text = resultado;
+            imageMoeda.Source = $"{moeda.LadoSorteado1}.jfif";
         }
     }
 
