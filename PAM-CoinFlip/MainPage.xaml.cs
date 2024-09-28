@@ -30,6 +30,7 @@
         }
         private void flipButton_Clicked(object sender, EventArgs e)
         {
+            string nome = nameEntry.Text;
             string ladoSelecionado = ChoosePicker.SelectedItem.ToString();
             Moeda moeda = new Moeda();
             moeda.Sortear();
@@ -37,12 +38,12 @@
             if (moeda.LadoSorteado1 == ladoSelecionado)
             {
               
-                resultLabel.Text = "Parabens! Você escolheu " + moeda.LadoSorteado1 +" e tirou " + ladoSelecionado;
+                resultLabel.Text = $"Parabens! {nome} Você escolheu {ladoSelecionado} e caiu {moeda.LadoSorteado1}";
             }
             else
             {
              
-                resultLabel.Text = "Que pena! Você escolheu {LadoSelecionado} e tirou {ladoSelecionado}";
+                resultLabel.Text = $"Que pena!  {nome} Você escolheu {ladoSelecionado} e caiu {moeda.LadoSorteado1}";
             }
             imageMoeda.Source = $"{moeda.LadoSorteado1}.jfif";
         }
